@@ -1,5 +1,7 @@
 # organize-markdown-images
 
+[简体中文](README.md) | [English](README.en.md)
+
 一个 [Claude Code](https://claude.com/claude-code) Skill：整理 Markdown 文档中的图片引用。
 
 ## 功能
