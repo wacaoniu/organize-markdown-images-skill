@@ -1,0 +1,21 @@
+{
+  "skill_name": "organize-markdown-images",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "整理 ./test-organize-images 目录下的所有 markdown 文件中的图片，把图片放到统一文件夹并改成相对路径。",
+      "expected_output": "所有本地图片被复制到各自 markdown 文件对应的 图片/<文档标题>/ 目录，编号为 01-、02- 等；markdown 中的引用被更新为相对路径；网络图片保持原样；缺失图片被报告。",
+      "files": [
+        "./test-organize-images/测试文档 A.md",
+        "./test-organize-images/subdir/subdir-文档.md"
+      ],
+      "expectations": [
+        "测试文档 A.md 中的本地图片引用被更新为相对路径 图片/测试文档 A/01-登录界面.png 和 图片/测试文档 A/02-系统架构图.png",
+        "assets/screenshot.png 和 assets/diagram.png 被复制到 图片/测试文档 A/ 目录下",
+        "网络图片 URL https://example.com/sample.png 保持不变",
+        "缺失图片 missing.png 被报告",
+        "subdir/subdir-文档.md 中的绝对路径和相对路径图片都被正确复制并更新为相对路径"
+      ]
+    }
+  ]
+}
